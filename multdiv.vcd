@@ -1,0 +1,69 @@
+$date
+	Sat Feb 21 11:01:57 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_MultDiv $end
+$var wire 9 ! Remainder [8:0] $end
+$var wire 9 " Quotient [8:0] $end
+$var wire 17 # Product [16:0] $end
+$var reg 9 $ A [8:0] $end
+$var reg 9 % B [8:0] $end
+$scope module div $end
+$var wire 9 & Dividend [8:0] $end
+$var wire 9 ' Divisor [8:0] $end
+$var reg 9 ( Quotient [8:0] $end
+$var reg 9 ) Remainder [8:0] $end
+$var reg 17 * rem [16:0] $end
+$var integer 32 + i [31:0] $end
+$upscope $end
+$scope module mult $end
+$var wire 9 , A [8:0] $end
+$var wire 9 - B [8:0] $end
+$var reg 17 . Product [16:0] $end
+$var integer 32 / i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1001 /
+b101101 .
+b11 -
+b1111 ,
+b11111111111111111111111111111111 +
+b0 *
+b0 )
+b101 (
+b11 '
+b1111 &
+b11 %
+b1111 $
+b101101 #
+b101 "
+b0 !
+$end
+#5
+b1 !
+b1 )
+b11111111111111111111111111111111 +
+b111 "
+b111 (
+b1 *
+b1001 /
+b101011110 #
+b101011110 .
+b111 %
+b111 '
+b111 -
+b110010 $
+b110010 &
+b110010 ,
+#10
