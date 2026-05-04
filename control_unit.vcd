@@ -1,0 +1,50 @@
+$date
+	Sat Feb 21 22:53:50 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module control_tb $end
+$var wire 1 ! ALUSrc $end
+$var wire 1 " RegWrite $end
+$var wire 2 # ALUOp [1:0] $end
+$var reg 2 $ opcode [1:0] $end
+$scope module uut $end
+$var wire 1 ! ALUSrc $end
+$var wire 2 % opcode [1:0] $end
+$var wire 1 " RegWrite $end
+$var wire 2 & ALUOp [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 &
+b0 %
+b0 $
+b0 #
+1"
+0!
+$end
+#1
+b1 #
+b1 &
+b1 $
+b1 %
+#2
+b10 #
+b10 &
+b10 $
+b10 %
+#3
+b11 #
+b11 &
+b11 $
+b11 %
+#13

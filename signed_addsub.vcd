@@ -1,0 +1,65 @@
+$date
+	Sat Feb 21 23:21:44 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_SignedAddSub $end
+$var reg 8 ! A [7:0] $end
+$var reg 8 " B [7:0] $end
+$var reg 8 # DIFF [7:0] $end
+$var reg 8 $ SUM [7:0] $end
+$var integer 32 % i [31:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 %
+bx $
+bx #
+bx "
+bx !
+$end
+#10
+b1 %
+b1010 #
+b11110 $
+b1010 "
+b10100 !
+#20
+b10 %
+b11101010 #
+b11111000 $
+b111 "
+b11110001 !
+#30
+b11 %
+b1000110 #
+b11110 $
+b11101100 "
+b110010 !
+#40
+b100 %
+b11101100 #
+b11011000 $
+b11110110 "
+b11100010 !
+#50
+b101 %
+b1111110 #
+b10000000 $
+b1 "
+b1111111 !
+#60
+b110 %
+b10000001 #
+b1111111 $
+b11111111 "
+b10000000 !
+#80

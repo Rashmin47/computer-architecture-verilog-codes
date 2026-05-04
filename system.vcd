@@ -1,0 +1,99 @@
+$date
+	Sat Feb 21 22:37:46 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module system_tb $end
+$var wire 4 ! q [3:0] $end
+$var wire 4 " data_out [3:0] $end
+$var reg 3 # addr [2:0] $end
+$var reg 1 $ clk $end
+$var reg 4 % d [3:0] $end
+$var reg 1 & load $end
+$var reg 1 ' reset $end
+$var reg 1 ( we $end
+$scope module U1 $end
+$var wire 1 $ clk $end
+$var wire 4 ) d [3:0] $end
+$var wire 1 & load $end
+$var wire 1 ' reset $end
+$var reg 4 * q [3:0] $end
+$upscope $end
+$scope module U2 $end
+$var wire 3 + addr [2:0] $end
+$var wire 1 $ clk $end
+$var wire 4 , data_in [3:0] $end
+$var wire 1 ( we $end
+$var reg 4 - data_out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx -
+b0 ,
+b0 +
+b0 *
+b0 )
+0(
+1'
+0&
+b0 %
+0$
+b0 #
+bx "
+b0 !
+$end
+#5
+1$
+#10
+0$
+0'
+#15
+1$
+#20
+0$
+b1010 %
+b1010 )
+1&
+#25
+b1010 !
+b1010 *
+b1010 ,
+1$
+#30
+0$
+0&
+#35
+1$
+#40
+0$
+b11 #
+b11 +
+1(
+#45
+1$
+#50
+0$
+0(
+#55
+b1010 "
+b1010 -
+1$
+#60
+0$
+#65
+1$
+#70
+0$
+#75
+1$
+#80
+0$

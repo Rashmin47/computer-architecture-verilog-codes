@@ -1,0 +1,103 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000018bfb6bd010 .scope module, "tb_AddSub" "tb_AddSub" 2 20;
+ .timescale 0 0;
+P_0000018bfb6f82e0 .param/l "N" 0 2 21, +C4<00000000000000000000000000001000>;
+v0000018bfb703aa0_0 .var/s "A", 7 0;
+v0000018bfb704360_0 .var/s "B", 7 0;
+v0000018bfb703960_0 .net "Overflow", 0 0, L_0000018bfb6f6710;  1 drivers
+v0000018bfb703c80_0 .net/s "Result", 7 0, L_0000018bfb703e60;  1 drivers
+v0000018bfb704220_0 .var "SUB", 0 0;
+S_0000018bfb6bd1a0 .scope module, "uut" "AddSub" 2 26, 2 1 0, S_0000018bfb6bd010;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "A";
+    .port_info 1 /INPUT 8 "B";
+    .port_info 2 /INPUT 1 "SUB";
+    .port_info 3 /OUTPUT 8 "Result";
+    .port_info 4 /OUTPUT 1 "Overflow";
+P_0000018bfb6f8a60 .param/l "N" 0 2 1, +C4<00000000000000000000000000001000>;
+L_0000018bfb6f60f0 .functor NOT 8, v0000018bfb704360_0, C4<00000000>, C4<00000000>, C4<00000000>;
+L_0000018bfb6f6160 .functor XNOR 1, L_0000018bfb703f00, L_0000018bfb703fa0, C4<0>, C4<0>;
+L_0000018bfb6f66a0 .functor XOR 1, L_0000018bfb79fcd0, L_0000018bfb79feb0, C4<0>, C4<0>;
+L_0000018bfb6f6710 .functor AND 1, L_0000018bfb6f6160, L_0000018bfb6f66a0, C4<1>, C4<1>;
+v0000018bfb6d33e0_0 .net/s "A", 7 0, v0000018bfb703aa0_0;  1 drivers
+v0000018bfb6f76c0_0 .net/s "B", 7 0, v0000018bfb704360_0;  1 drivers
+v0000018bfb6bd330_0 .net/s "B_mod", 7 0, L_0000018bfb703b40;  1 drivers
+v0000018bfb6bd3d0_0 .net "Overflow", 0 0, L_0000018bfb6f6710;  alias, 1 drivers
+v0000018bfb6f6fe0_0 .net/s "Result", 7 0, L_0000018bfb703e60;  alias, 1 drivers
+v0000018bfb6f7080_0 .net "SUB", 0 0, v0000018bfb704220_0;  1 drivers
+v0000018bfb704040_0 .net *"_ivl_0", 7 0, L_0000018bfb6f60f0;  1 drivers
+v0000018bfb7036e0_0 .net/s *"_ivl_10", 8 0, L_0000018bfb703d20;  1 drivers
+v0000018bfb7040e0_0 .net *"_ivl_17", 0 0, L_0000018bfb703f00;  1 drivers
+v0000018bfb703460_0 .net *"_ivl_19", 0 0, L_0000018bfb703fa0;  1 drivers
+L_0000018bfb756ff8 .functor BUFT 1, C4<00000001>, C4<0>, C4<0>, C4<0>;
+v0000018bfb703500_0 .net/2u *"_ivl_2", 7 0, L_0000018bfb756ff8;  1 drivers
+v0000018bfb703820_0 .net *"_ivl_20", 0 0, L_0000018bfb6f6160;  1 drivers
+v0000018bfb703780_0 .net *"_ivl_23", 0 0, L_0000018bfb79fcd0;  1 drivers
+v0000018bfb7035a0_0 .net *"_ivl_25", 0 0, L_0000018bfb79feb0;  1 drivers
+v0000018bfb704180_0 .net *"_ivl_26", 0 0, L_0000018bfb6f66a0;  1 drivers
+v0000018bfb703640_0 .net *"_ivl_4", 7 0, L_0000018bfb703a00;  1 drivers
+v0000018bfb7038c0_0 .net/s *"_ivl_8", 8 0, L_0000018bfb703be0;  1 drivers
+v0000018bfb7042c0_0 .net/s "temp", 8 0, L_0000018bfb703dc0;  1 drivers
+L_0000018bfb703a00 .arith/sum 8, L_0000018bfb6f60f0, L_0000018bfb756ff8;
+L_0000018bfb703b40 .functor MUXZ 8, v0000018bfb704360_0, L_0000018bfb703a00, v0000018bfb704220_0, C4<>;
+L_0000018bfb703be0 .extend/s 9, v0000018bfb703aa0_0;
+L_0000018bfb703d20 .extend/s 9, L_0000018bfb703b40;
+L_0000018bfb703dc0 .arith/sum 9, L_0000018bfb703be0, L_0000018bfb703d20;
+L_0000018bfb703e60 .part L_0000018bfb703dc0, 0, 8;
+L_0000018bfb703f00 .part v0000018bfb703aa0_0, 7, 1;
+L_0000018bfb703fa0 .part L_0000018bfb703b40, 7, 1;
+L_0000018bfb79fcd0 .part L_0000018bfb703e60, 7, 1;
+L_0000018bfb79feb0 .part v0000018bfb703aa0_0, 7, 1;
+    .scope S_0000018bfb6bd010;
+T_0 ;
+    %vpi_call 2 35 "$dumpfile", "add_sub.vcd" {0 0 0};
+    %vpi_call 2 36 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000018bfb6bd010 {0 0 0};
+    %pushi/vec4 20, 0, 8;
+    %store/vec4 v0000018bfb703aa0_0, 0, 8;
+    %pushi/vec4 10, 0, 8;
+    %store/vec4 v0000018bfb704360_0, 0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000018bfb704220_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 39 "$display", "ADD: A=%0d B=%0d Result=%0d Overflow=%b", v0000018bfb703aa0_0, v0000018bfb704360_0, v0000018bfb703c80_0, v0000018bfb703960_0 {0 0 0};
+    %pushi/vec4 127, 0, 8;
+    %store/vec4 v0000018bfb703aa0_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v0000018bfb704360_0, 0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000018bfb704220_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 41 "$display", "ADD: A=%0d B=%0d Result=%0d Overflow=%b", v0000018bfb703aa0_0, v0000018bfb704360_0, v0000018bfb703c80_0, v0000018bfb703960_0 {0 0 0};
+    %pushi/vec4 20, 0, 8;
+    %store/vec4 v0000018bfb703aa0_0, 0, 8;
+    %pushi/vec4 10, 0, 8;
+    %store/vec4 v0000018bfb704360_0, 0, 8;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000018bfb704220_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 44 "$display", "SUB: A=%0d B=%0d Result=%0d Overflow=%b", v0000018bfb703aa0_0, v0000018bfb704360_0, v0000018bfb703c80_0, v0000018bfb703960_0 {0 0 0};
+    %pushi/vec4 128, 0, 8;
+    %store/vec4 v0000018bfb703aa0_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v0000018bfb704360_0, 0, 8;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000018bfb704220_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 46 "$display", "SUB: A=%0d B=%d Result=%0d Overflow=%b", v0000018bfb703aa0_0, v0000018bfb704360_0, v0000018bfb703c80_0, v0000018bfb703960_0 {0 0 0};
+    %delay 20, 0;
+    %vpi_call 2 48 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "addsub.v";

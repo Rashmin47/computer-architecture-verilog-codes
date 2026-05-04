@@ -1,0 +1,101 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001e3f10da720 .scope module, "parity_combined_tb" "parity_combined_tb" 2 12;
+ .timescale 0 0;
+v000001e3f11e2db0_0 .var "a", 0 0;
+v000001e3f11e35d0_0 .var "b", 0 0;
+v000001e3f11e3350_0 .var "c", 0 0;
+v000001e3f11e32b0_0 .net "error", 0 0, L_000001e3f11946e0;  1 drivers
+v000001e3f11e37b0_0 .net "p", 0 0, L_000001e3f10da8b0;  1 drivers
+S_000001e3f10dab90 .scope module, "uut1" "ParityGenerator" 2 15, 2 1 0, S_000001e3f10da720;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "p";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+    .port_info 3 /INPUT 1 "c";
+L_000001e3f1196150 .functor XOR 1, v000001e3f11e2db0_0, v000001e3f11e35d0_0, C4<0>, C4<0>;
+L_000001e3f10da8b0 .functor XOR 1, L_000001e3f1196150, v000001e3f11e3350_0, C4<0>, C4<0>;
+v000001e3f1163360_0 .net *"_ivl_0", 0 0, L_000001e3f1196150;  1 drivers
+v000001e3f1163400_0 .net "a", 0 0, v000001e3f11e2db0_0;  1 drivers
+v000001e3f10dad20_0 .net "b", 0 0, v000001e3f11e35d0_0;  1 drivers
+v000001e3f10dadc0_0 .net "c", 0 0, v000001e3f11e3350_0;  1 drivers
+v000001e3f10dae60_0 .net "p", 0 0, L_000001e3f10da8b0;  alias, 1 drivers
+S_000001e3f1195d40 .scope module, "uut2" "ParityChecker" 2 16, 2 6 0, S_000001e3f10da720;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "error";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+    .port_info 3 /INPUT 1 "c";
+    .port_info 4 /INPUT 1 "p";
+L_000001e3f1194b40 .functor XOR 1, v000001e3f11e2db0_0, v000001e3f11e35d0_0, C4<0>, C4<0>;
+L_000001e3f1194750 .functor XOR 1, L_000001e3f1194b40, v000001e3f11e3350_0, C4<0>, C4<0>;
+L_000001e3f11946e0 .functor XOR 1, L_000001e3f1194750, L_000001e3f10da8b0, C4<0>, C4<0>;
+v000001e3f10daf00_0 .net *"_ivl_0", 0 0, L_000001e3f1194b40;  1 drivers
+v000001e3f1195ed0_0 .net *"_ivl_2", 0 0, L_000001e3f1194750;  1 drivers
+v000001e3f1195f70_0 .net "a", 0 0, v000001e3f11e2db0_0;  alias, 1 drivers
+v000001e3f1196010_0 .net "b", 0 0, v000001e3f11e35d0_0;  alias, 1 drivers
+v000001e3f11960b0_0 .net "c", 0 0, v000001e3f11e3350_0;  alias, 1 drivers
+v000001e3f1162ae0_0 .net "error", 0 0, L_000001e3f11946e0;  alias, 1 drivers
+v000001e3f1162b80_0 .net "p", 0 0, L_000001e3f10da8b0;  alias, 1 drivers
+    .scope S_000001e3f10da720;
+T_0 ;
+    %vpi_call 2 19 "$dumpfile", "parity_combined.vcd" {0 0 0};
+    %vpi_call 2 20 "$dumpvars" {0 0 0};
+    %vpi_call 2 21 "$monitor", $time, " a=%b,b=%b,c=%b,p=%b,error=%b", v000001e3f11e2db0_0, v000001e3f11e35d0_0, v000001e3f11e3350_0, v000001e3f11e37b0_0, v000001e3f11e32b0_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e3f11e2db0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e3f11e35d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e3f11e3350_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e3f11e2db0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e3f11e35d0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e3f11e3350_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e3f11e2db0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e3f11e35d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e3f11e3350_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e3f11e2db0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e3f11e35d0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e3f11e3350_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e3f11e2db0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e3f11e35d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001e3f11e3350_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e3f11e2db0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e3f11e35d0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001e3f11e3350_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 29 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "parity.v";

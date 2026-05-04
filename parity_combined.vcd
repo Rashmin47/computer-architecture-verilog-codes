@@ -1,0 +1,59 @@
+$date
+	Sat Feb 21 21:49:12 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module parity_combined_tb $end
+$var wire 1 ! p $end
+$var wire 1 " error $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$var reg 1 % c $end
+$scope module uut1 $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 % c $end
+$var wire 1 ! p $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 % c $end
+$var wire 1 " error $end
+$var wire 1 ! p $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0%
+0$
+0#
+0"
+0!
+$end
+#1
+1!
+1%
+#2
+0%
+1$
+#3
+0!
+1%
+#4
+1!
+0%
+0$
+1#
+#5
+1%
+1$
+#15

@@ -1,0 +1,46 @@
+$date
+	Sat Feb 21 17:43:45 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module overflowtb $end
+$var wire 1 ! overflow $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$var reg 1 $ sum $end
+$scope module uut $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 ! overflow $end
+$var wire 1 $ sum $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0$
+0#
+0"
+0!
+$end
+#1
+1!
+1$
+#2
+0$
+1#
+1"
+#3
+0!
+1$
+#4
+0$
+0"
+#14

@@ -1,0 +1,48 @@
+$date
+	Sat Feb 21 22:08:34 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_EncoderDecoder $end
+$var reg 4 ! D_in [3:0] $end
+$var reg 1 " SHOW_NAME $end
+$var reg 4 # decoder_out [3:0] $end
+$var reg 2 $ encoder_out [1:0] $end
+$var integer 32 % i [31:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 %
+bx $
+bx #
+1"
+b1 !
+$end
+#10
+b10 !
+b1 %
+b1 #
+b0 $
+#20
+b100 !
+b10 %
+b10 #
+b1 $
+#30
+b1000 !
+b11 %
+b100 #
+b10 $
+#40
+b100 %
+b1000 #
+b11 $
+#60
